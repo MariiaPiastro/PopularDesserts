@@ -11,5 +11,8 @@ class DessertDetailActivity : AppCompatActivity() {
         setContentView(R.layout.activity_dessert_detail)
 
         textViewTitleDessertDetailActivity.text = intent.getStringExtra("title")
+        textViewDessertInfoDetailActivity.text = intent.getStringExtra("info")
+        val image = intent.getIntExtra("image",0)
+        imageViewDessertDetailActivity.setImageResource(image)
     }
 }

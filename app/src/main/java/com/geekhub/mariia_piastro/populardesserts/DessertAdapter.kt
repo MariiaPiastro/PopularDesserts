@@ -11,7 +11,7 @@ import android.widget.ImageView
 import android.widget.TextView
 
 class DessertAdapter(context: Context, private val desserts: ArrayList<Desserts>) :
-    RecyclerView.Adapter<DessertAdapter.ViewHolder>(), View.OnClickListener {
+    RecyclerView.Adapter<DessertAdapter.ViewHolder>() {
 
     private val inflater: LayoutInflater = LayoutInflater.from(context)
 
@@ -42,7 +42,7 @@ class DessertAdapter(context: Context, private val desserts: ArrayList<Desserts>
         }
     }
 
-    inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view)  {
         private val dessertTitle = view.findViewById<TextView>(R.id.TextViewTitleDessert)
         private val dessertImageView = view.findViewById<ImageView>(R.id.imageViewDessert)
 
