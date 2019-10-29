@@ -1,6 +1,5 @@
 package com.geekhub.mariia_piastro.populardesserts
 
-import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.support.v7.widget.RecyclerView
@@ -14,9 +13,9 @@ class DessertAdapter(context: Context, private val desserts: ArrayList<Desserts>
     RecyclerView.Adapter<DessertAdapter.ViewHolder>() {
 
     private val inflater: LayoutInflater = LayoutInflater.from(context)
-    val title = "title"
-    val info = "info"
-    val image = "image"
+    private val title = "title"
+    private val info = "info"
+    private val image = "image"
 
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): ViewHolder {
         val view: View = inflater.inflate(R.layout.list_item, p0, false)

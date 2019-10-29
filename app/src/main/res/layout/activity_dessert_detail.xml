@@ -9,7 +9,7 @@
 
     <ImageView
             android:id="@+id/imageViewDessertDetailActivity"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="150dp"
             tools:src="@drawable/dessert0"
             android:adjustViewBounds="true"
@@ -20,7 +20,7 @@
 
     <TextView
             android:id="@+id/textViewTitleDessertDetailActivity"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="150dp"
             android:layout_margin="8dp"
             android:gravity="center_vertical"
@@ -34,7 +34,7 @@
             app:layout_constraintHorizontal_bias="0.0"/>
     <TextView
             android:id="@+id/textViewDessertInfoDetailActivity"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:padding="8dp"
             tools:text="Dessert Info"
