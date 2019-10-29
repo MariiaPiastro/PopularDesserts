@@ -14,18 +14,14 @@ class DessertAdapter(context: Context, private val desserts: ArrayList<Desserts>
     RecyclerView.Adapter<DessertAdapter.ViewHolder>() {
 
     private val inflater: LayoutInflater = LayoutInflater.from(context)
+    val title = "title"
+    val info = "info"
+    val image = "image"
 
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): ViewHolder {
         val view: View = inflater.inflate(R.layout.list_item, p0, false)
-        // view.setOnClickListener(this)
         return ViewHolder(view)
     }
-
-//    override fun onClick(v: View) {
-//        val intent = Intent(v.context, DessertDetailActivity::class.java )
-//        intent.putExtra("title", "dessert")
-//        v.context.startActivity(intent)
-//    }
 
     override fun getItemCount(): Int {
         return desserts.size
@@ -35,14 +31,14 @@ class DessertAdapter(context: Context, private val desserts: ArrayList<Desserts>
         p0.bind(desserts[p1])
         p0.itemView.setOnClickListener { v ->
             val intent = Intent(v.context, DessertDetailActivity::class.java)
-            intent.putExtra("title", desserts[p1].title)
-            intent.putExtra("info", desserts[p1].info)
-            intent.putExtra("image",desserts[p1].image)
+            intent.putExtra(title, desserts[p1].title)
+            intent.putExtra(info, desserts[p1].info)
+            intent.putExtra(image, desserts[p1].image)
             v.context.startActivity(intent)
         }
     }
 
-    inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view)  {
+    inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         private val dessertTitle = view.findViewById<TextView>(R.id.TextViewTitleDessert)
         private val dessertImageView = view.findViewById<ImageView>(R.id.imageViewDessert)
 
